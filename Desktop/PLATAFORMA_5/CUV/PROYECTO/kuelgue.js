@@ -18,10 +18,21 @@ else{
         document.querySelector(".homeTitulo").style.color="blue"
         
     }
+//FUNCION getTickets
+function getTickets(lugar, tickets){
+    if (tickets === false) {
+        return swal(
+          "Lo sentimos!",
+          "No hay más tickets para " + 
+          lugar, "info",
+        );
+      } else {
+        return swal("Compra exitosa!", "Ud. ha adquirido un ticket para " + lugar + 
+        " concert", "success");
+      }
+}
 
-
-
-
+getTickets(lugar, tickets)
 
 
 
