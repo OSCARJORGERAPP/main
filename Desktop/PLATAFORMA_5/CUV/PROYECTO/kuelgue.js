@@ -18,7 +18,9 @@ else{
         document.querySelector(".homeTitulo").style.color="blue"
         
     }
-//FUNCION getTickets
+
+// función getTickets
+    
 function getTickets(lugar, tickets){
     if (tickets === false) {
         return swal(
@@ -27,12 +29,11 @@ function getTickets(lugar, tickets){
           lugar, "info",
         );
       } else {
-        return swal("Compra exitosa!", "Ud. ha adquirido un ticket para " + lugar + 
-        " concert", "success");
+        return swal("Compra exitosa!", "Ud. ha adquirido un ticket para el concierto en " + lugar + "."
+        , "success");
       }
 }
 
-getTickets(lugar, tickets)
 
 
 
