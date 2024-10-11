@@ -1,0 +1,195 @@
+body{
+    background-color: black;
+    
+}
+
+h1{
+    position: fixed;
+    color:brown;
+    text-align: center;
+    font-size:350%;
+    background-color: white;
+    border: 5px solid;
+    border-color: brown;
+    top: 0px;
+    margin-left: 45%;
+    padding: 10px;
+    border-radius: 10px; 
+   } 
+
+h2{
+    color:brown;
+    font-size:150%;
+}
+
+.itemsLog{
+  width: 35%;
+  height: 600px;
+  background-color: black;
+  border: 5px solid;
+  border-color: brown;
+  padding: 10px;
+  border-radius: 10px;
+  position: fixed;
+  top: 20%;
+  left: 35%;
+}
+
+.logs{
+    background-color: white;
+    width: 500px;
+    height: 50px;
+    border: 3px solid;
+    border-color: brown;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:x-large;
+    font-weight: bolder;
+    color: brown;
+    input[type=text]{
+    border: 2px solid brown;
+    background-color: white;
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    }
+    input[type=password]{
+      border: 2px solid brown;
+      background-color: white;
+      font-size: x-large;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    button[type=submit]{
+      border: 2px solid brown;
+      background-color: lightgrey;
+      font-size: x-large;
+      font-family: 'Times New Roman', Times, serif;
+      }
+    input[type=email]{
+          border: 2px solid brown;
+          background-color: white;
+          font-size: x-large;
+          font-family: 'Times New Roman', Times, serif;
+      
+    }
+    textarea[type=descripcion]{
+      border: 2px solid brown;
+      background-color: white;
+      font-size: x-large;
+      font-family: 'Times New Roman', Times, serif;
+  
+    }
+  
+    input[type=website]{
+      border: 2px solid brown;
+      background-color: white;
+      font-size: x-large;
+      font-family: 'Times New Roman', Times, serif;
+  
+  }
+  
+  input[type=url]{
+    border: 2px solid brown;
+    background-color: white;
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+  
+  }
+  }
+
+  .link{
+    background-color: white;
+    border: 5px;
+    border-style: solid;
+    border-color: brown;
+    border-radius: 10px;
+    width: 90%;
+    height: 30px;
+    margin: 5px;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bolder;
+    color: brown;
+  }
+
+  .sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    border: 5px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: brown;
+    width:10%;
+    height: 300px;
+    align-content: center;
+    justify-content:space-around;
+    position: fixed;
+    top: 60%;
+    left: 5%;
+  }
+
+  .addItemsLog{
+    width: 35%;
+    height: 700px;
+    background-color: black;
+    border: 5px solid;
+    border-color: brown;
+    padding: 10px;
+    border-radius: 10px;
+    position: fixed;
+    top: 10%;
+    left: 35%;
+  }
+
+  .bajo{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0px;
+    right: 0px;
+  }
+
+  .teclado{
+    position: relative;
+    height: 100%;
+    width: 50%;
+    top: 0px;
+    left: 0px;
+  }
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    height: 50px;
+    width: 250px;
+    border: 5px solid brown;
+    border-radius: 10px;
+    background-color: white;
+   justify-content: center;
+   position: fixed;
+   top: 90px;
+   right: 100px;
+
+}
+.social-icons a {
+    text-decoration:none;
+    
+}
+.social-icons img {
+    width: 40px;
+    height: 40px;
+}
+.otroEstadio{
+  position: fixed;
+  top: 90px;
+  left: 100px;
+  height: 200px;
+  width: 400px;
+  border: 3px solid brown;
+  border-radius: 10px;
+}
