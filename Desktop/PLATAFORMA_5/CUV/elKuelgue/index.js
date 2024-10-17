@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 const router=require('./routes/band.js')
 
 //LLAMAR A MODELS USER
-const users = require('./models/albums.js');
+const albums = require('./models/albums.js');
 
 //NUESTRA URL MONGO DB
 const url = 'mongodb+srv://ojrapp:Wn24CK6xa3SdXSBy@cluster0.bbhym.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
@@ -39,17 +39,3 @@ const connectToMongo = async()=>{
 }
  
 connectToMongo()
-
-
-
-
-
-
-
-
-//app.get("/", (req, res)=>{
-//    res.status(200).send('Hola') 
-//})
-
-
-

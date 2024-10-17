@@ -5,10 +5,10 @@ const albums = new mongoose.Schema({
     descripcion:{type:String},
     fechaDeLanzamiento: {type: Date},
     portada:{type:String},
-    canciones: {
-            nombreDeCancion: {type: String},
-            duracion : {type: String}
-        }
+    canciones: [{
+        nombreDeCancion: { type: String },
+        duracion: { type: String }
+        }]
     })
 
 
