@@ -5,9 +5,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 //LLAMAR RUTAS
-const router=require('./routes/band.js')
+const usersRouter=require('./routes/users.js')
+const bandasRouter=require('./albums/band.js')
 
-//LLAMAR A MODELS USER
+//LLAMAR A MODELS USERS Y ALBUMS
+const users = require('./models/users.js');
 const albums = require('./models/albums.js');
 
 //NUESTRA URL MONGO DB
@@ -20,7 +22,8 @@ const app = express();
 app.use(express.json());
 
 //ORGANIZADOR DE LAS RUTAS
-app.use('/', router);
+app.use('/users', usersRouter);
+app.use('/albums', bandasRouter);
 
 //CONEXION CON NUESTRA URL MONGO DB
 const connectToMongo = async()=>{
