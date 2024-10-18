@@ -39,6 +39,17 @@ function olvideMiPassword(){
       return swal("Password reset","Se ha enviado un mail para el cambio de password.","success");
     }
 
+//FUNCION AXIOS PARA HACER REQUERIMIENTOS AL BACK END Y RECIBIR RESPUESTAS
+    async function obtenerUsuarios() {
+        try {
+          const response = await axios.get('https://ejemplo.com/usuarios');
+          console.log(response.data);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+      
+      obtenerUsuarios();
 
 
 

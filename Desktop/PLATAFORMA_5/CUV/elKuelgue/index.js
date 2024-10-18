@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 
 //LLAMAR RUTAS
 const usersRouter=require('./routes/users.js')
-const bandasRouter=require('./albums/band.js')
+const bandasRouter=require('./routes/band.js')
 
 //LLAMAR A MODELS USERS Y ALBUMS
 const users = require('./models/users.js');
@@ -17,9 +17,13 @@ const url = 'mongodb+srv://ojrapp:Wn24CK6xa3SdXSBy@cluster0.bbhym.mongodb.net/?r
 
 //GUARDAMOS EL MODULO EXPRESS EN UNA CONSTANTE
 const app = express();
+const path = require("path");
 
 //MIDDLE WEAR PARCEA/ORGANIZA LOS DATOS PARA LEERLOS MEJOR
 app.use(express.json());
+
+//SIRVE LOS ARCHIVOS DEL FRONT END
+app.use(express.static(path.join(__dirname, "public")));
 
 //ORGANIZADOR DE LAS RUTAS
 app.use('/users', usersRouter);

@@ -4,7 +4,7 @@ const albums = require('../models/albums')
 //UNA INSTANCIA PARA MANEJAR RUTAS
 const router = express.Router()
 
-//CREATE - En TC localhost:3000/albums - En el Body los campos del modelo que quiero agregar
+//CREATE - En TC localhost:3000/albums/albums - En el Body los campos del modelo que quiero agregar
 router.post('/albums', async (req, res)=>{
     try {
       await albums.create(req.body)
@@ -15,7 +15,7 @@ router.post('/albums', async (req, res)=>{
     }
 })
 
-// GET - LISTAR TODOS LOS ALBUMS - TC localhost:3000/albums
+// GET - LISTAR TODOS LOS ALBUMS - TC localhost:3000/albums/albums
 router.get('/albums', async (req, res)=>{
   try {
     const result = await albums.find({})
@@ -30,7 +30,7 @@ router.get('/albums', async (req, res)=>{
   }
 })
 
-//GET x TITULO - TC localhost:3000/albums/titulo
+//GET x TITULO - TC localhost:3000/albums/albums/titulo
 
 router.get('/albums/:titulo', async (req, res)=>{
   try {
@@ -46,7 +46,7 @@ router.get('/albums/:titulo', async (req, res)=>{
   }
 })
 
-//UPDATE - En el body solo lo que quiero cambiar - En TC localhost:3000/albums/id
+//UPDATE - En el body solo lo que quiero cambiar - En TC localhost:3000/albums/albums/id
 router.put('/albums/:id', async (req, res)=>{
   try {
     const album = await albums.findByIdAndUpdate(req.params.id, req.body,{new: true})
@@ -57,7 +57,7 @@ router.put('/albums/:id', async (req, res)=>{
   }
 })
 
-//DELETE - En TC localhost:3000/albums/id
+//DELETE - En TC localhost:3000/albums//albums/id
 router.delete('/albums/:id', async (req, res)=>{
   try {
       await albums.findByIdAndDelete(req.params.id, [0].canciones)

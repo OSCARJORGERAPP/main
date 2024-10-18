@@ -4,7 +4,7 @@ const users = require('../models/users')
 //UNA INSTANCIA PARA MANEJAR RUTAS
 const router = express.Router()
 
-//CREATE - En TC localhost:3000/users - En el Body los campos del modelo que quiero agregar
+//CREATE - En TC localhost:3000/users/users - En el Body los campos del modelo que quiero agregar
 router.post('/users', async (req, res)=>{
     try {
       await users.create(req.body)
@@ -15,7 +15,7 @@ router.post('/users', async (req, res)=>{
     }
 })
 
-// GET - LISTAR TODOS LOS users - TC localhost:3000/users
+// GET - LISTAR TODOS LOS users - TC localhost:3000/users/users
 router.get('/users', async (req, res)=>{
   try {
     const result = await users.find({})
@@ -31,7 +31,7 @@ router.get('/users', async (req, res)=>{
   }
 })
 
-//GET x TITULO - TC localhost:3000/users/nombre
+//GET x TITULO - TC localhost:3000/users/users/nombre
 
 router.get('/users/:nombre', async (req, res)=>{
   try {
@@ -48,7 +48,7 @@ router.get('/users/:nombre', async (req, res)=>{
   }
 })
 
-//UPDATE - En el body solo lo que quiero cambiar - En TC localhost:3000/users/id
+//UPDATE - En el body solo lo que quiero cambiar - En TC localhost:3000/users/users/id
 router.put('/users/:id', async (req, res)=>{
   try {
     const user = await users.findByIdAndUpdate(req.params.id, req.body,{new: true})
@@ -59,7 +59,7 @@ router.put('/users/:id', async (req, res)=>{
   }
 })
 
-//DELETE - En TC localhost:3000/users/id
+//DELETE - En TC localhost:3000/users/users/id
 router.delete('/users/:id', async (req, res)=>{
   try {
       await users.findByIdAndDelete(req.params.id, [0].canciones)
