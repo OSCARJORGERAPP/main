@@ -4,8 +4,8 @@ const users = require('../models/users')
 //UNA INSTANCIA PARA MANEJAR RUTAS
 const router = express.Router()
 
-//CREATE - En TC localhost:3000/users/users - En el Body los campos del modelo que quiero agregar
-router.post('/users', async (req, res)=>{
+//CREATE - En TC localhost:3000/users - En el Body los campos del modelo que quiero agregar
+router.post('/', async (req, res)=>{
     try {
       await users.create(req.body)
       res.status(201).send("Usuario creado correctamente")
@@ -15,8 +15,8 @@ router.post('/users', async (req, res)=>{
     }
 })
 
-// GET - LISTAR TODOS LOS users - TC localhost:3000/users/users
-router.get('/users', async (req, res)=>{
+// GET - LISTAR TODOS LOS users - TC localhost:3000/users
+router.get('/', async (req, res)=>{
   try {
     const result = await users.find({})
     if (result.length){
@@ -31,9 +31,9 @@ router.get('/users', async (req, res)=>{
   }
 })
 
-//GET x TITULO - TC localhost:3000/users/users/nombre
+//GET x TITULO - TC localhost:3000/nombre
 
-router.get('/users/:nombre', async (req, res)=>{
+router.get('/:nombre', async (req, res)=>{
   try {
     const result = await users.find({nombre: req.params.nombre})
     if (result.length){
@@ -48,11 +48,31 @@ router.get('/users/:nombre', async (req, res)=>{
   }
 })
 
-//UPDATE - En el body solo lo que quiero cambiar - En TC localhost:3000/users/users/id
-router.put('/users/:id', async (req, res)=>{
+//UPDATE - En el body solo lo que quiero cambiar - En TC localhost:3000/users/id
+router.put('/:id', async (req, res)=>{
   try {
-    const user = await users.findByIdAndUpdate(req.params.id, req.body,{new: true})
-    res.status(200).send(user)
+    const favoritos = req.body.favoritos
+    const accion =req.body.accion
+    const user = await users.findById(req.params.id)
+
+    if (accion === 'agregar'){
+      console.log(user)
+      user.favoritos.push(favoritos)
+      await user.save()
+    }
+
+    if (accion === 'eliminar'){
+      console.log(user)
+      user.favoritos.pop() //Ver variantes en lugar de pop
+      await user.save()
+    }
+
+    /*if (accion==='datos'){
+      const user = await users.findByIdAndUpdate(req.params.id, req.body,{new: true})
+    }*/
+
+      res.status(200).send(user)
+    
   } catch (error) {
     console.log(error)
     res.status(500).send("Hubo un error en la actualizacion")
@@ -60,9 +80,9 @@ router.put('/users/:id', async (req, res)=>{
 })
 
 //DELETE - En TC localhost:3000/users/users/id
-router.delete('/users/:id', async (req, res)=>{
+router.delete('/:id', async (req, res)=>{
   try {
-      await users.findByIdAndDelete(req.params.id, [0].canciones)
+      await users.findByIdAndDelete(req.params.id, canciones)
       res.status(200).send("Elemento eliminado correctamente")
       } 
 

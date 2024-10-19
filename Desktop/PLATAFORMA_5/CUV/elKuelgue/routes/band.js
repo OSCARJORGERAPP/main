@@ -5,7 +5,7 @@ const albums = require('../models/albums')
 const router = express.Router()
 
 //CREATE - En TC localhost:3000/albums/albums - En el Body los campos del modelo que quiero agregar
-router.post('/albums', async (req, res)=>{
+router.post('/', async (req, res)=>{
     try {
       await albums.create(req.body)
       res.status(201).send("Album creado correctamente")
@@ -16,7 +16,7 @@ router.post('/albums', async (req, res)=>{
 })
 
 // GET - LISTAR TODOS LOS ALBUMS - TC localhost:3000/albums/albums
-router.get('/albums', async (req, res)=>{
+router.get('/', async (req, res)=>{
   try {
     const result = await albums.find({})
     if (result.length){
@@ -32,7 +32,7 @@ router.get('/albums', async (req, res)=>{
 
 //GET x TITULO - TC localhost:3000/albums/albums/titulo
 
-router.get('/albums/:titulo', async (req, res)=>{
+router.get('/:titulo', async (req, res)=>{
   try {
     const result = await albums.find({titulo: req.params.titulo})
     if (result.length){
@@ -47,10 +47,30 @@ router.get('/albums/:titulo', async (req, res)=>{
 })
 
 //UPDATE - En el body solo lo que quiero cambiar - En TC localhost:3000/albums/albums/id
-router.put('/albums/:id', async (req, res)=>{
+router.put('/:id', async (req, res)=>{
   try {
-    const album = await albums.findByIdAndUpdate(req.params.id, req.body,{new: true})
+    const canciones = req.body.canciones
+    const accion =req.body.accion
+    const album = await albums.findById(req.params.id)
+
+    if (accion === 'agregar'){
+      console.log(album)
+      album.canciones.push(canciones)
+      await album.save()
+    }
+
+    if (accion === 'eliminar'){
+      console.log(album)
+      album.canciones.pop() //Ver variantes en lugar de pop
+      await album.save()
+    }
+
+    /*if (accion==='datos'){
+      const album = await albums.findByIdAndUpdate(req.params.id, req.body,{new: true})
+      }*/
+
     res.status(200).send(album)
+    
   } catch (error) {
     console.log(error)
     res.status(500).send("Hubo un error en la actualizacion")
@@ -58,7 +78,7 @@ router.put('/albums/:id', async (req, res)=>{
 })
 
 //DELETE - En TC localhost:3000/albums//albums/id
-router.delete('/albums/:id', async (req, res)=>{
+router.delete('/:id', async (req, res)=>{
   try {
       await albums.findByIdAndDelete(req.params.id, [0].canciones)
       res.status(200).send("Elemento eliminado correctamente")
