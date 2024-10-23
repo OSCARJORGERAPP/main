@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                   <td>${album.fechaDeLanzamiento}</td>
                   <td><a href="${album.portada}" target="_blank">Ver</a></td>
                   <td>
-                      <span class="icon" onclick="editAlbum('${album._id}')">&#9998;</span>
+                      <span class="icon" onclick="window.location.href='editAlbum.html?id=${album._id}'">&#9998;</span>
                       <span class="icon" onclick="deleteAlbum('${album._id}')">&#128465;</span>
                   </td>
               `;
@@ -51,8 +51,6 @@ async function editAlbum(id) {
         alert('Error al editar el álbum');
     }
 }
-
-
 
 async function deleteAlbum(id) {
     try {

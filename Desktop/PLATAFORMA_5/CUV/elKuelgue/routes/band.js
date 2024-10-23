@@ -30,23 +30,18 @@ router.get('/', async (req, res)=>{
   }
 })
 
-//GET x TITULO - TC localhost:3000/albums/albums/titulo
+//GET x id - TC localhost:3000/albums/albums/id
 
-router.get('/:titulo', async (req, res)=>{
+router.get('/:id', async (req, res)=>{
   try {
-    const result = await albums.find({titulo: req.params.titulo})
-    if (result.length){
-      res.status(200).send(result)
-    }
-    else{
-      res.status(200).send('no existe ese título')
-    }
-  } catch (error) {
-    res.status(404).send("No data")
+    const album = await albums.findById(req.params.id);
+    res.status(200).send(album);
+    }catch (error) {
+    res.status(404).send("No se encontró el album")
   }
 })
 
-//UPDATE - En el body solo lo que quiero cambiar - En TC localhost:3000/albums/albums/id
+/*UPDATE - En el body solo lo que quiero cambiar - En TC localhost:3000/albums/albums/id
 router.put('/:id', async (req, res)=>{
   try {
     const canciones = req.body.canciones
@@ -69,13 +64,13 @@ router.put('/:id', async (req, res)=>{
       const album = await albums.findByIdAndUpdate(req.params.id, req.body,{new: true})
       }*/
 
-    res.status(200).send(album)
+   /* res.status(200).send(album)
     
   } catch (error) {
     console.log(error)
     res.status(500).send("Hubo un error en la actualizacion")
   }
-})
+})*/
 
 //DELETE - En TC localhost:3000/albums//albums/id
 router.delete('/:id', async (req, res)=>{
