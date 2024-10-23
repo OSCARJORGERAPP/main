@@ -1,6 +1,6 @@
-/*const express = require('express');
+const express = require('express');
 const router = express.Router();
-const albums = require('../models/albums');*/
+const albums = require('../models/albums');
 
 // Ruta para obtener todos los álbumes
 router.get('/', async (req, res) => {
@@ -23,6 +23,22 @@ router.delete('/:id', async (req, res) => {
         res.status(200).send("Álbum borrado correctamente");
     } catch (error) {
         res.status(500).send("Error al borrar el álbum");
+    }
+});
+
+// Ruta para actualizar un álbum específico
+router.put('/:id', async (req, res) => {
+    try {
+        const { titulo, fechaDeLanzamiento, descripcion, portada } = req.body;
+        await albums.findByIdAndUpdate(req.params.id, {
+            titulo,
+            fechaDeLanzamiento,
+            descripcion,
+            portada
+        });
+        res.status(200).send("Álbum actualizado correctamente");
+    } catch (error) {
+        res.status(500).send("Error al actualizar el álbum");
     }
 });
 

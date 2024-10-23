@@ -31,10 +31,28 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 });
 
-function editAlbum(id) {
-  // Lógica para editar el álbum
-  alert('Editar álbum con ID: ' + id);
+async function editAlbum(id) {
+    const titulo = document.getElementById('titulo').value;
+    const fechaDeLanzamiento = document.getElementById('fechaDeLanzamiento').value;
+    const descripcion = document.getElementById('descripcion').value;
+    const portada = document.getElementById('portada').value;
+
+    try {
+        const response = await axios.put(`http://localhost:3000/albums/${id}`, {
+            titulo,
+            fechaDeLanzamiento,
+            descripcion,
+            portada
+        });
+        alert(response.data);
+        location.reload(); // Recarga la página para actualizar la lista de álbumes
+    } catch (error) {
+        //console.error('Error al editar el álbum:', error);
+        alert('Error al editar el álbum');
+    }
 }
+
+
 
 async function deleteAlbum(id) {
     try {

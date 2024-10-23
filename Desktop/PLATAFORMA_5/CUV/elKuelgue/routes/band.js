@@ -90,4 +90,21 @@ router.delete('/:id', async (req, res)=>{
   }
 })
 
+// Ruta para actualizar un álbum específico
+router.put('/:id', async (req, res) => {
+  try {
+      const { titulo, fechaDeLanzamiento, descripcion, portada } = req.body;
+      await albums.findByIdAndUpdate(req.params.id, {
+          titulo,
+          fechaDeLanzamiento,
+          descripcion,
+          portada
+      });
+      res.status(200).send("Álbum actualizado correctamente");
+  } catch (error) {
+      res.status(500).send("Error al actualizar el álbum");
+  }
+});
+
+
 module.exports = router
