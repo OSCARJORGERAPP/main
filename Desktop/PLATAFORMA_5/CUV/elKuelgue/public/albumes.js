@@ -36,10 +36,17 @@ function editAlbum(id) {
   alert('Editar álbum con ID: ' + id);
 }
 
-function deleteAlbum(id) {
-  // Lógica para borrar el álbum
-  alert('Borrar álbum con ID: ' + id);
+async function deleteAlbum(id) {
+    try {
+        const response = await axios.delete(`http://localhost:3000/albums/${id}`);
+        alert(response.data);
+        location.reload(); // Recarga la página para actualizar la lista de álbumes
+    } catch (error) {
+        console.error('Error al borrar el álbum:', error);
+        alert('Error al borrar el álbum');
+    }
 }
+
 
 //CAMBIA EL COLORDE LAS ESTRELLAS
 function toggleStar(element) {

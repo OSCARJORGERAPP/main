@@ -80,7 +80,7 @@ router.put('/:id', async (req, res)=>{
 //DELETE - En TC localhost:3000/albums//albums/id
 router.delete('/:id', async (req, res)=>{
   try {
-      await albums.findByIdAndDelete(req.params.id, [0].canciones)
+      await albums.findByIdAndDelete(req.params.id)
       res.status(200).send("Elemento eliminado correctamente")
       } 
 
