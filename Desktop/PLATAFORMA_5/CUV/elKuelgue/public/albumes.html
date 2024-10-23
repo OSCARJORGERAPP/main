@@ -42,12 +42,12 @@
 
 <!--FORMULARIO DE CARGA DE ALBUMES USANDO POSITION FIXED-->
 <div class="albumContainer">
-    <form method="get" action="albumes.html">
-        <div class="albumAdd"><label for="nombreAlbum"><input type="text" name="nombreAlbum" placeholder="nombre del album" id="nombreAlbum" required></label></div>
-        <div class="albumAdd"><label for="añoLanzmiento"><input type="text" name="añoLanzamiento" placeholder="año de lanzamiento" id="añoLanzamiento" required></label></div>
+    <form id="albumForm">
+        <div class="albumAdd"><label for="titulo"><input type="text" name="titulo" placeholder="Título del album" id="titulo" required></label></div>
+        <div class="albumAdd"><label for="fechaDeLanzmiento"><input type="text" name="fechaDeLanzmiento" placeholder="Fecha de lanzamiento" id="fechaDeLanzmiento" required></label></div>
         <div class="albumAdd"><label for="descripcion"><textarea name="descripcion" rows="2" cols="30" placeholder="Descripcion" id="descripcion" required></textarea></label></div>
-        <div class="albumAdd"><label for="imageUrl"><input type="text" name="imageUrl" placeholder="https://www.sitio/imagen.jpg" id="imageUrl" required></label></div>
-        <div class="albumAdd"><button type="submit" onclick="validaUsuarios()">grabar album</button></div>
+        <div class="albumAdd"><label for="portada"><input type="text" name="portada" placeholder="https://www.portada.com" id="portada" required></label></div>
+        <div class="albumAdd"><button type="submit">grabar album</button></div>
 
     </form> 
 
@@ -57,23 +57,15 @@
       <thead>
         <tr>
           <th>Título</th>
-          <th>Fecha de Lanzamiento</th>
           <th>Descripción</th>
-          <th>Acción</th>
+          <th>Fecha de Lanzamiento</th>
+          <th>Portada</th>
+          <th>Acciones</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Hola Precioso</td>
-          <td>08/06/2023</td>
-          <td>Este álbum se presenta como una obra clásica pero moderna que nunca abandona el absurdo habitual del grupo y le otorga una nueva estética a sus sonidos. Contiene 9 canciones y la duración total del álbum es aproximadamente 34 minutos.</td>
-          <td><img src="delete.png" alt="papelera" class="papelera"></td>
-        </tr>
-        <tr>
-          <td>Cuentito</td>
-          <td>30/09/2021</td>
-          <td>Cuentito representa el quinto álbum de estudio de El Kuelgue, lanzado el 30 de septiembre de 2021. Está compuesto por ocho canciones, la mitad de ellas habiendo sido lanzadas como singles en el pasado: "Soda", "View Master", "Roma" y "La Mirada".</td>
-          <td><img src="delete.png" alt="papelera" class="papelera"></td>
+          <tbody id="albumsTableBody"></tbody>
         </tr>
       </tbody>
     </table>
@@ -91,7 +83,7 @@
    </div>
    
    <!--VINCULA JS CON HTML-->
-    <!--<script src="kuelgue.js"></script>-->
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="albumes.js"></script>
     
 </body>

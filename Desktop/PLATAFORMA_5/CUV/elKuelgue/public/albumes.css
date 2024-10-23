@@ -233,10 +233,10 @@ h1{
       font-size: smaller;
     }
 
-    .papelera{
-        background-color: white;
-        height: 30px;
-        width: 30px;
+    .icon {
+      cursor: pointer;
+      margin: 0 5px;
+  }
        
 
-    }
+    
