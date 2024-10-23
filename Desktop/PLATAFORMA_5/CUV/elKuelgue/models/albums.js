@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const albums = new mongoose.Schema({
     titulo: {type: String, require:true},
     descripcion:{type:String},
-    fechaDeLanzamiento: {type: Date},
+    fechaDeLanzamiento: {type: String},
     portada:{type:String},
     canciones: [{
         nombreDeCancion: { type: String },

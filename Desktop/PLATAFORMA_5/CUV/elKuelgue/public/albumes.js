@@ -1,21 +1,4 @@
-//OBJETO ALBUMES PARA LA TABLA OMONIMA
-const albums = [
-  {
-      _id: '6710ac4de9dfa050f56ec54a',
-      titulo: 'Hola Precioso',
-      descripcion: 'Contiene 9 canciones y la duración total del álbum es aproximadamente ...',
-      fechaDeLanzamiento: '2023',
-      portada: 'https://www.youtube.com/playlist?list=OLAK5uy_mO3b-_x7mPlefqH7i742e3n28JRItY_Ks'
-  },
-  {
-      _id: '6710b396b596a1914672de8b',
-      titulo: 'Cuentito',
-      descripcion: 'Está compuesto por ocho canciones, la mitad de ellas habiendo sido lan...',
-      fechaDeLanzamiento: '2021',
-      portada: 'https://www.youtube.com/watch?v=xxF4gRNFtkA'
-  }
-];
-
+//OBTIENE LOS DATOS DE ALBUMS MONGO DB
 document.addEventListener('DOMContentLoaded', async () => {
   const tableBody = document.getElementById('albumsTableBody');
 
@@ -40,6 +23,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           });
       } else {
           tableBody.innerHTML = `<tr><td colspan="5">${albums}</td></tr>`;
+          location.reload()
       }
   } catch (error) {
       console.error('Error al obtener los álbumes:', error);
@@ -75,6 +59,7 @@ document.getElementById('albumForm').addEventListener('submit', async function(e
       const response = await axios.post('http://localhost:3000/albums', data);
       alert(response.data);
       form.reset()
+      location.reload()
   } catch (error) {
       console.error('Error al crear el álbum:', error);
       alert('Error al crear el álbum');

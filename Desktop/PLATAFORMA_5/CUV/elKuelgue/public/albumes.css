@@ -1,5 +1,6 @@
 body{
-    background-color: black; 
+    background-color: black;
+    overflow-y: scroll; 
 }
 
 h1{
@@ -49,13 +50,13 @@ h1{
   }
   
 .escenario{
-    width: 40%;
-    height: 40%;
+    width:100vw;
+    height: 100vh;
     border-image: 5px;
     border-style: solid;
     border-color: brown;
     border-radius: 10px;
-    position:fixed;
+    
     top: 18%;
     left: 30%; 
   } 
@@ -204,17 +205,18 @@ h1{
 
     .tableContainer {
       display: flex;
-      position: fixed;
+      position:fixed;
       right: 30%;
-      bottom: 25px;
+      top: 153px;
       justify-content: center;
       align-items: center;
-      height: 35vh;
+      height:auto;
       width: 40vw;
       border: 5px solid brown;
       border-radius: 10px;
       background-color:black;
-      
+      overflow-y: auto;max-height: 800px;
+
     }
     table {
       border-collapse: collapse;
