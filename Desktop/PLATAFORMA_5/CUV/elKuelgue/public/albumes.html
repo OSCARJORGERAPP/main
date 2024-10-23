@@ -43,9 +43,9 @@
 <!--FORMULARIO DE CARGA DE ALBUMES USANDO POSITION FIXED-->
 <div class="albumContainer">
     <form id="albumForm">
-        <div class="albumAdd"><label for="titulo"><input type="text" name="titulo" placeholder="Título del album" id="titulo" required></label></div>
-        <div class="albumAdd"><label for="fechaDeLanzamiento"><input type="text" name="fechaDeLanzamiento" placeholder="Fecha de lanzamiento" id="fechaDeLanzamiento" required></label></div>
-        <div class="albumAdd"><label for="descripcion"><textarea name="descripcion" rows="2" cols="30" placeholder="Descripcion" id="descripcion" required></textarea></label></div>
+        <div class="albumAdd"><label for="titulo"><input type="text" name="titulo" placeholder="Título del album" id="titulo" minlength="2" required></label></div>
+        <div class="albumAdd"><label for="fechaDeLanzamiento"><input type="text" name="fechaDeLanzamiento" placeholder="Fecha de lanzamiento" id="fechaDeLanzamiento" minlength="4" required></label></div>
+        <div class="albumAdd"><label for="descripcion"><textarea name="descripcion" rows="2" cols="30" placeholder="Descripcion" id="descripcion" minlength="10" required></textarea></label></div>
         <div class="albumAdd"><label for="portada"><input type="text" name="portada" placeholder="https://www.portada.com" id="portada" required></label></div>
         <div class="albumAdd"><button type="submit">grabar album</button></div>
 
@@ -74,9 +74,9 @@
     
 <!--SIDEBAR USANDO POSITION FIXED-->   
    <div class="sidebar">
+       <div class="link">Menú</a></div>
        <div class="link"><a href="index.html">Logout</a></div>
        <div class="link"><a href="registro.html">Registro</a></div>
-       <div class="link"><a href="addAlbum.html">Album nuevo</div>
        <div class="link"><a href="musica.html">música</div>
        <div class="link"><a href="shows.html">Shows</div>
        <div class="link"><a href="celularTour.html">Celular Tour</div>

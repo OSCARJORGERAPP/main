@@ -16,9 +16,9 @@
     <h2>Editar album</h2>
     
     <form id="albumForm">
-        <div class="logs"><label for="titulo">Título:<input type="text" name="titulo" placeholder="Título del album" id="titulo" required></label></div>
-        <div class="logs"><label for="descripcion"></label><textarea name="descripcion" rows="4" cols="50" placeholder="Descripcion" id="descripcion" required></textarea></label></div>
-        <div class="logs"><label for="fechaDeLanzamiento">Fecha de lanzamiento:<input type="text" id="fechaDeLanzamiento" name="fechaDeLanzamiento" placeholder="fechaDeLanzamiento" required></label></div>
+        <div class="logs"><label for="titulo">Título:<input type="text" name="titulo" placeholder="Título del album" id="titulo" minlength="2" required ></label></div>
+        <div class="logs"><label for="descripcion"></label><textarea name="descripcion" rows="4" cols="50" placeholder="Descripcion" id="descripcion" minlength="2" required></textarea></label></div>
+        <div class="logs"><label for="fechaDeLanzamiento">Fecha de lanzamiento:<input type="text" id="fechaDeLanzamiento" name="fechaDeLanzamiento" placeholder="fechaDeLanzamiento" minlength="2" required></label></div>
         <div class="logs"><label for="portada">Ingresa la URL de la portada:<input type="url" id="portada" name="portada" placeholder="https://ejemplo.com" required></label></div>
         <div class="logs"><button type="submit">Guardar información</button></div>
     </form>
