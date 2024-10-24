@@ -1,6 +1,6 @@
 //LLAMAR A EXPRESS (DEPENDENCIA)
 const express = require('express');
-
+const cors = require('cors');
 //LLAMAR A MONGOOSE
 const mongoose = require('mongoose');
 
@@ -21,7 +21,7 @@ const path = require("path");
 
 //MIDDLE WEAR PARCEA/ORGANIZA LOS DATOS PARA LEERLOS MEJOR
 app.use(express.json());
-
+app.use(cors())
 //SIRVE LOS ARCHIVOS DEL FRONT END
 app.use(express.static(path.join(__dirname, "public")));
 

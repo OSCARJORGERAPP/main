@@ -34,8 +34,7 @@ function olvideMiPassword() {
 }
 
 // Obtener el formulario de login
-const form = document.getElementById('loginForm');
-console.log(form)
+const form = document.querySelector('form');
 const mensajeError = document.getElementById('mensajeError');
 
 // Añadir un evento de escucha al formulario para el envío de datos

@@ -1,4 +1,4 @@
-//OBTIENE LOS DATOS DE ALBUMS MONGO DB
+//OBTIENE LOS DATOS DE ALBUMS MONGO DB LES DA FORMATO Y LOS MUESTRA
 document.addEventListener('DOMContentLoaded', async () => {
   const tableBody = document.getElementById('albumsTableBody');
 
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       tableBody.innerHTML = '<tr><td colspan="5">Error al obtener los álbumes</td></tr>';
   }
 });
-
+//TOMA LOS DATOS DE EDITALBUM MODIFICA LA db Y RECARGA LA PAGINA
 async function editAlbum(id) {
     const titulo = document.getElementById('titulo').value;
     const fechaDeLanzamiento = document.getElementById('fechaDeLanzamiento').value;
@@ -81,10 +81,11 @@ document.getElementById('albumForm').addEventListener('submit', async function(e
   try {
       const response = await axios.post('http://localhost:3000/albums', data);
       alert(response.data);
-      form.reset()
-      location.reload()
+      form.reset();
+      location.reload();
   } catch (error) {
       console.error('Error al crear el álbum:', error);
       alert('Error al crear el álbum');
   }
 });
+

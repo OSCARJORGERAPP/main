@@ -18,7 +18,7 @@
 <!--CENTRA Y DA FORMATO AL BLOQUE DIV PADRE Y DA FORMATO A LOS DIV HIJOS-->
 <div class="itemsLog">
     <h2>Registro de usuarios</h2>
-    <form method="get" action="registro.html">
+    <form id="registrationForm">
         <div class="logs"><label for="nombre_usuario">Nombre:<input type="text" name="nombre" placeholder="nombre" id="nombre_usuario" required></label></div>
         <div class="logs"><label for="password">password:<input type="password" name="password" placeholder="password" id="password" required oninput="validarPassword()"></label></div>
         <p id="mensajeError" class="error">Use más de 6 caracteres</p>
@@ -49,7 +49,7 @@
 <img src="./Imagenes/otroEstadio.jpg" alt="otro estadio" class="otroEstadio">
 
 
-
-    <script src="registro.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="registro.js"></script>
 </body>
 </html>

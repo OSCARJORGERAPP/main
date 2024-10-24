@@ -20,11 +20,11 @@
 
  <!--LOGIN EN POSICION FIJA A LA IZQUIERDA Y ABAJO EN LA PAGINA-->   
  <div class="container">
-    <form method="get" action="albumes.html">
+    <form id="loginForm" method="get" action="albumes.html">
         <div class="login"><label for="nombre_usuario"><input type="text" name="nombre" placeholder="nombre" id="nombre_usuario" required></label></div>
-        <div class="login"><label for="password"><input type="password" name="password" placeholder="password" id="password" required oninput="validarPassword()"></label></div>
+        <div class="login"><label for="password"><input type="password" name="password" placeholder="password" id="password" required oninput="validarPassword()" autocomplete="current-password"></label></div>
         <p id="mensajeError" class="error">Use más de 6 caracteres</p>
-        <div class="login"><button type="submit" onclick="grabarDatos()">login</button></div>
+        <div class="login"><button type="submit">login</button></div>
         <div class="login"><button type="submit" onclick="olvideMiPassword()">Olvide mi password</button></div>
         <div class="login"><a href="registro.html" class="btnlog">registrese aquí</a></div>
     </form>
