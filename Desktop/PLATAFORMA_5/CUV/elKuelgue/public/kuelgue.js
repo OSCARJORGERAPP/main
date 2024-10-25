@@ -83,8 +83,8 @@ form.addEventListener('submit', async function(event) {
         // Manejar cualquier error que ocurra durante el proceso de login
         console.error('Error al iniciar sesión:', error);
         swal({
-            title: "Error",
-            text: "Hubo un problema al iniciar sesión.",
+            title: "Error de login",
+            text: "Registrese y vuelva a intentarlo.",
             icon: "error",
         });
     }

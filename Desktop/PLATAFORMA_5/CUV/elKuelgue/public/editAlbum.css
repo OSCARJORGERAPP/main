@@ -37,65 +37,77 @@ h2{
 
 .logs{
     background-color: white;
-    width: 500px;
+    width: 375px;
     height: 50px;
     border: 3px solid;
     border-color: brown;
     border-radius: 10px;
     text-align: center;
-    padding: 20px;
-    margin-left: 30px;
-    margin-bottom: 20px;
-    font-family: 'Times New Roman', Times, serif;
-    font-size:x-large;
+    padding: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    font-family:'Courier New', Courier, monospace;
+    font-size:larger;
     font-weight: bolder;
     color: brown;
     input[type=text]{
-    border: 2px solid brown;
+    border: 3px solid brown;
+    border-radius: 5px;
     background-color: white;
-    font-size: x-large;
-    font-family: 'Times New Roman', Times, serif;
+    font-size:medium;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bolder;
+    justify-items: center;
     }
     input[type=password]{
       border: 2px solid brown;
       background-color: white;
-      font-size: x-large;
-      font-family: 'Times New Roman', Times, serif;
+      font-size: medium;
+      font-family:'Courier New', Courier, monospace;
+      font-weight: bolder;
     }
     button[type=submit]{
-      border: 2px solid brown;
+      margin-top: 10px;
+      border: 3px solid brown;
+      border-radius: 5px;
       background-color: lightgrey;
-      font-size: x-large;
-      font-family: 'Times New Roman', Times, serif;
+      font-size: medium;
+      font-family:'Courier New', Courier, monospace;
+      font-weight: bolder;
+      
       }
     input[type=email]{
           border: 2px solid brown;
           background-color: white;
-          font-size: x-large;
-          font-family: 'Times New Roman', Times, serif;
+          font-size: medium;
+          font-family:'Courier New', Courier, monospace;
+          font-weight: bolder;
       
     }
     textarea[type=descripcion]{
       border: 2px solid brown;
       background-color: white;
-      font-size: x-large;
-      font-family: 'Times New Roman', Times, serif;
+      font-size: medium;
+      font-family:'Courier New', Courier, monospace;
   
     }
   
     input[type=website]{
       border: 2px solid brown;
       background-color: white;
-      font-size: x-large;
-      font-family: 'Times New Roman', Times, serif;
+      font-size: medium;
+      font-family:'Courier New', Courier, monospace;
+      font-weight: bolder;
   
   }
   
   input[type=url]{
-    border: 2px solid brown;
+    border: 3px solid brown;
+    border-radius: 5px;
     background-color: white;
-    font-size: x-large;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bolder;
   
   }
   }
@@ -128,21 +140,21 @@ h2{
     align-content: center;
     justify-content:space-around;
     position: fixed;
-    top: 60%;
-    left: 5%;
+    bottom: 20px;
+    left: 50px;;
   }
 
   .addItemsLog{
-    width: 35%;
-    height: 700px;
+    width: 400px;
+    height: 460px;
     background-color: black;
     border: 5px solid;
     border-color: brown;
     padding: 10px;
     border-radius: 10px;
     position: fixed;
-    top: 10%;
-    left: 35%;
+    bottom:200px;
+    left: 650px;
   }
 
   .bajo{
@@ -164,16 +176,16 @@ h2{
 .social-icons {
     display: flex;
     gap: 20px;
-    padding: 10px;
-    height: 50px;
-    width: 250px;
+    padding: 5px;
+    height: 25px;
+    width: 200px;
     border: 5px solid brown;
     border-radius: 10px;
     background-color: white;
    justify-content: center;
    position: fixed;
-   top: 90px;
-   right: 100px;
+   top: 100px;
+   left: 740px;
 
 }
 .social-icons a {
@@ -181,15 +193,70 @@ h2{
     
 }
 .social-icons img {
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
 }
 .otroEstadio{
   position: fixed;
-  top: 90px;
-  left: 100px;
-  height: 200px;
-  width: 400px;
+  top: 20px;
+  left: 50px;
+  height: 300px;
+  width: 450px;
   border: 3px solid brown;
   border-radius: 10px;
+}
+
+.cancionesAdd{
+  display:flexbox;
+  flex-direction:column;
+  background-color: black;
+  border: 5px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: brown;
+  width: 255px;
+  height: 320px;
+  align-content: center;
+  justify-content:space-around;
+  position: fixed;
+  top: 20px;
+  right: 50px;
+}
+
+.div{
+  background-color: white;
+  border: solid 5px brown;
+  border-radius: 10px;
+  width: 235px;
+  height: 45px;
+  margin: 10px;
+  input[type=text]{
+    width: 210px;
+    height: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: solid brown 3px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace
+};
+input[type=url]{
+  width: 210px;
+  height: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
+  border: solid brown 3px;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace
+};
+button[type=submit]{
+  width: 210px;
+  height: 25px;
+  margin-top: 10px;
+  margin-left: 10px;
+  border: solid brown 3px;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: medium;
+  font-weight: bolder;
+}
 }

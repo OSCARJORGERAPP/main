@@ -40,3 +40,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    swal("IMPORTANTE!!", "Si agrega canciones, lo hará para el título que se muestra en el formulario para editar álbumes.", "warning");
+});

@@ -16,10 +16,10 @@
     <h2>Editar album</h2>
     
     <form id="albumForm">
-        <div class="logs"><label for="titulo">Título:<input type="text" name="titulo" placeholder="Título del album" id="titulo" minlength="2" required ></label></div>
-        <div class="logs"><label for="descripcion"></label><textarea name="descripcion" rows="4" cols="50" placeholder="Descripcion" id="descripcion" minlength="2" required></textarea></label></div>
-        <div class="logs"><label for="fechaDeLanzamiento">Fecha de lanzamiento:<input type="text" id="fechaDeLanzamiento" name="fechaDeLanzamiento" placeholder="fechaDeLanzamiento" minlength="2" required></label></div>
-        <div class="logs"><label for="portada">Ingresa la URL de la portada:<input type="url" id="portada" name="portada" placeholder="https://ejemplo.com" required></label></div>
+        <div class="logs"><label for="titulo">Título del album<input type="text" name="titulo" placeholder="Título del album" id="titulo" minlength="2" required ></label></div>
+        <div class="logs"><label for="descripcion"></label><textarea name="descripcion" rows="2" cols="30" placeholder="Descripcion" id="descripcion" minlength="2" required></textarea></label></div>
+        <div class="logs"><label for="fechaDeLanzamiento">Fecha de lanzamiento<input type="text" id="fechaDeLanzamiento" name="fechaDeLanzamiento" placeholder="fechaDeLanzamiento" minlength="2" required></label></div>
+        <div class="logs"><label for="portada">URL de la portada<input type="url" id="portada" name="portada" placeholder="https://ejemplo.com" required></label></div>
         <div class="logs"><button type="submit">Guardar información</button></div>
     </form>
 </div>
@@ -43,6 +43,24 @@
 </div>
 
 <img src="./Imagenes/otroEstadio.jpg" alt="otro estadio" class="otroEstadio">
+
+<!--FORMULARIO DE CARGA DE CANCIONES USANDO POSITION FIXED-->
+<div class="cancionesAdd">
+    <h2>Agregar canciones</h2>   
+    <form id="cancionesForm">
+        <div class="div"><label for="cancion"><input type="text" name="cancion" placeholder="Nombre de la canción" id="cancion" minlength="2" required ></label></div>
+        <div class="div"><label for="duracion"><input type="text" id="duracion" name="duracion" placeholder="duracion" minlength="2" required></label></div>
+        <div class="div"><label for="link"><input type="url" id="duracion" name="duracion" placeholder="https://ejemplo.com" required></label></div>
+        <div class="div"><button type="submit">Guardar información</button></div>
+    </form>
+</div>
+
+
+
+
+
+
+
 
 
 <!--CONEXION CON SWEETALERT, AXIOS, Y addAlbum.js-->

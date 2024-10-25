@@ -94,9 +94,6 @@ router.put('/:id', async (req, res)=>{
       await user.save()
     }
 
-    /*if (accion==='datos'){
-      const user = await users.findByIdAndUpdate(req.params.id, req.body,{new: true})
-    }*/
 
       res.status(200).send(user)
     
