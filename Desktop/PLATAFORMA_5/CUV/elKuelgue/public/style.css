@@ -98,6 +98,10 @@ h2{
   color: brown;
 }
 
+.link:hover {
+  background-color: salmon;
+}
+
 .sidebar{
   display: flex;
   flex-direction: column;
@@ -115,6 +119,20 @@ h2{
   left: 5%;
   
 }
+
+@keyframes slideInLeft {
+  from {
+      transform: translateX(-100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+.sidebar {
+  animation: slideInLeft 1s ease-out;
+}
+
 
 .presentacion{
   background-color: white;

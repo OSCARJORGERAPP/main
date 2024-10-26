@@ -18,6 +18,7 @@ form.addEventListener('submit', async function(event) {
     if (password.length < 6) {
         // Muestra el mensaje de error si la validación falla
         mensajeError.style.display = 'block';
+        swal("Password incorrecto","El password debe tener al menos 6 caracteres.", "warning")
         // Sale de la función sin continuar con el registro
         return; 
     } else {
@@ -49,7 +50,7 @@ form.addEventListener('submit', async function(event) {
         // Muestra una alerta de error utilizando SweetAlert
         swal({
             title: "Error",
-            text: "Hubo un problema al registrar el usuario.",
+            text: "Error al registrar el usuario,el nombre debe tener al menos 2 caracteres",
             icon: "error",
         });
     }

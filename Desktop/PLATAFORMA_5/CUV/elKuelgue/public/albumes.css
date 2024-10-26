@@ -31,6 +31,10 @@ h1{
     font-weight: bolder;
     color: brown;
   }
+
+  .link:hover {
+    background-color:salmon;
+}
   
 .sidebar{
     display: flex;
@@ -48,6 +52,20 @@ h1{
     top: 18%;
     left: 10%;  
   }
+
+  @keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.sidebar {
+    animation: slideInLeft 1s ease-out;
+}
+
   
 .escenario{
     width:100vw;

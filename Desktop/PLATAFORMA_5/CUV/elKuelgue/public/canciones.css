@@ -53,6 +53,10 @@ body {
     font-weight: bolder;
     color: brown;
   }
+
+  .link:hover {
+    background-color: salmon;
+}
   
 .sidebar{
     display: flex;
@@ -70,6 +74,20 @@ body {
     bottom: 50px;
     left: 50px;  
   }
+
+  @keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.sidebar {
+    animation: slideInLeft 1s ease-out;
+}
+
 
   h1{
     position: fixed;

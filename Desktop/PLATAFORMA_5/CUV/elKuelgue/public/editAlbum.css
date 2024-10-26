@@ -127,6 +127,10 @@ h2{
     color: brown;
   }
 
+  .link:hover {
+    background-color: salmon;
+}
+
   .sidebar{
     display: flex;
     flex-direction: column;
@@ -143,6 +147,20 @@ h2{
     bottom: 20px;
     left: 50px;;
   }
+
+  @keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.sidebar {
+    animation: slideInLeft 1s ease-out;
+}
+
 
   .addItemsLog{
     width: 400px;
@@ -200,7 +218,7 @@ h2{
   position: fixed;
   top: 20px;
   left: 50px;
-  height: 300px;
+  height: 280px;
   width: 450px;
   border: 3px solid brown;
   border-radius: 10px;
@@ -230,6 +248,7 @@ h2{
   width: 235px;
   height: 45px;
   margin: 10px;
+  font-weight: bolder;
   input[type=text]{
     width: 210px;
     height: 20px;
@@ -237,7 +256,8 @@ h2{
     margin-left: 10px;
     border: solid brown 3px;
     border-radius: 5px;
-    font-family: 'Courier New', Courier, monospace
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
 };
 input[type=url]{
   width: 210px;
@@ -246,7 +266,8 @@ input[type=url]{
   margin-left: 10px;
   border: solid brown 3px;
   border-radius: 5px;
-  font-family: 'Courier New', Courier, monospace
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
 };
 button[type=submit]{
   width: 210px;
@@ -259,4 +280,14 @@ button[type=submit]{
   font-size: medium;
   font-weight: bolder;
 }
+}
+
+.rojo{
+  position: fixed;
+  top: 559px;
+  right: 50px;
+  height: 300px;
+  width: 450px;
+  border: 3px solid brown;
+  border-radius: 10px;
 }
