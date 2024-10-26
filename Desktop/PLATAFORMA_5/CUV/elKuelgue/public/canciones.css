@@ -1,0 +1,202 @@
+body {
+    background-color: black;
+    color: white;
+    font-family:'Courier New', Courier, monospace Arial, sans-serif;
+
+}
+
+.container {
+  background-color: black;
+    position: fixed;
+    border: solid brown 5px;
+    border-radius: 10px;
+    padding: 20px;
+    top: 55%;
+    left: 33%;
+    margin: 50px auto;
+    width: 30%;
+    text-align: center;
+}
+
+.tablaCanciones {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tablaCanciones th, .tablaCanciones td {
+    border: 2px solid brown;
+    padding: 8px;
+}
+
+.tablaCanciones th {
+    background-color:black;
+    color: white;
+}
+
+.icon {
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.link{
+    background-color: white;
+    border: 5px;
+    border-style: solid;
+    border-color: brown;
+    border-radius: 10px;
+    width: 90%;
+    height: 30px;
+    margin: 5px;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bolder;
+    color: brown;
+  }
+  
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    border: 5px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: brown;
+    width:10%;
+    height: 300px;
+    align-content: center;
+    justify-content:space-around;
+    position: fixed;
+    bottom: 50px;
+    left: 50px;  
+  }
+
+  h1{
+    position: fixed;
+    color:brown;
+    text-align: center;
+    font-size:350%;
+    background-color: white;
+    border: 5px solid;
+    border-color: brown;
+    top: 0px;
+    margin-left: 40%;
+    padding: 10px;
+    border-radius: 10px; 
+   } 
+
+   .bailando{
+    position:relative;
+    top: 0px;
+    left: 0px;
+    height: 80%;
+    width: 50%;
+  }
+
+  .bateria{
+    position:absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 50%;
+  }
+
+  .social-icons {
+    display: flex;
+    position: fixed;
+    bottom: 50px;
+    right: 43%;
+    gap: 20px;
+    padding: 5px;
+    height: 25px;
+    width: 200px;
+    border: 5px solid brown;
+    border-radius: 10px;
+    background-color: white;
+   justify-content: center;
+    
+  
+  }
+  .social-icons a {
+    text-decoration:none;
+    
+  }
+  .social-icons img {
+    width: 20px;
+    height: 20px;  
+  }
+
+  .banner{
+    position:fixed;
+    top: 230px;
+    left: 50px;
+    width: 1600px;
+    height: 260px;
+    
+    border-radius: 10px;
+    background-color: black;
+  }
+
+  .img{
+    width: 200px;
+    height: 200px;
+    margin: 27px;
+    border: solid brown 5px;
+    border-radius: 10px;
+  }
+
+  .escenario{
+    position: fixed;
+    top: 20px;
+    right: 79px;
+    width: 460px;
+    height: 200px;
+    border: solid brown 5px;
+    border-radius: 10px;
+  }
+
+  .otroEstadio{
+    position: fixed;
+    top: 20px;
+    left: 80px;
+    width: 460px;
+    height: 200px;
+    border: solid brown 5px;
+    border-radius: 10px;
+  }
+
+  .estadio{
+    position: fixed;
+    top: 20px;
+    left: 354px;
+    width: 200px;
+    height: 150px;
+    border: solid brown 5px;
+    border-radius: 10px;
+  }
+
+  .rojo{
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    width: 470px;
+    height: 300px;
+    border: solid brown 5px;
+    border-radius: 10px;
+  }
+
+  .multitud{
+    position: fixed;
+    bottom: 123px;
+    left: 270px;
+  }
+
+  .verde{
+    position: fixed;
+    bottom: 20px;
+    left: 240px;
+    width: 250px;
+    height: 300px;
+    border: solid brown 5px;
+    border-radius: 10px;
+  }

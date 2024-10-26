@@ -79,4 +79,22 @@ router.delete('/:id', async (req, res) => {
     }
 });
 
+
+
+// Eliminar una canción de un álbum específico
+router.delete('/:albumId/canciones/:cancionId', async (req, res) => {
+    
+    try {
+        const { albumId, cancionId } = req.params;
+        console.log(req.params)
+        const album = await albums.findById(albumId);
+        console.log(album)
+        album.canciones=album.canciones.filter(cancion=>cancion.id!==cancionId)
+        await album.save();
+        res.status(200).send("Canción eliminada correctamente");
+    } catch (error) {
+        res.status(500).send("Error al eliminar la canción");
+    }
+});
+
 module.exports = router;

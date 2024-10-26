@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canciones</title>
+    <link rel="stylesheet" href="canciones.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="kuelgueIco.jpg">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+    
+    <h1>El Kuelgue</h1>
+
+    <div class="banner">
+        <img src="./Imagenes/beatriz.jpg" alt="Beatriz" class="img">
+        <img src="./Imagenes/ruli.jpg" alt="Ruli" class="img">
+        <img src="./Imagenes/cariñoReptil.jpg" alt="Cariño Reptil" class="img">
+        <img src="./Imagenes/fierrin.jpg" alt="Fierrin" class="img">
+        <img src="./Imagenes/cuentito.jpg" alt="Cuentito" class="img">
+        <img src="./Imagenes/holaPrecioso.jpg" alt="Hola Precioso" class="img">
+    </div>
+
+    <img src="./Imagenes/rojo.jpg" alt="Rojo" class="img rojo">
+    <img src="./Imagenes/verde.jpg" alt="verde" class="img verde">
+    <!--<img src="./Imagenes/verde.jpg" alt="Verde" class="img verde">-->
+    <img src="./Imagenes/escenario.jpg" alt="Escenario" class="escenario">
+    <img src="./Imagenes/otroEstadio.jpg" alt="Otro Estadio" class="otroEstadio">
+    <!--<img src="./Imagenes/estadio.jpg" alt="Estadio" class="estadio">-->
+
+    <div class="container">
+        <label for="albumes">Seleccione un álbum:</label>
+        <select id="albumes" name="albumes">
+            <!-- Las opciones serán agregadas dinámicamente desde el servidor -->
+        </select>
+        <table id="tablaCanciones" class="tablaCanciones">
+            <thead>
+                <tr>
+                    <th>Nombre de la canción</th>
+                    <th>Duración en minutos</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las canciones serán agregadas dinámicamente desde el servidor -->
+            </tbody>
+        </table>
+    </div>
+
+    <!--SIDEBAR USANDO POSITION FIXED-->   
+   <div class="sidebar">
+    <div class="link">Menú</a></div>
+    <div class="link"><a href="index.html">Logout</a></div>
+    <div class="link"><a href="registro.html">Registro</a></div>
+    <div class="link"><a href="albumes.html">albumes</div>
+    <div class="link"><a href="shows.html">Shows</div>
+    <div class="link"><a href="celularTour.html">Celular Tour</div>
+</div>
+
+<div class="social-icons">
+    <a href="https://www.youtube.com/results?search_query=el+kuelgue"><img src="youtu_red.png" alt="YouTube"></a>
+    <a href="https://www.facebook.com/ElKuelgue/?locale=es_LA"><img src="face_blue.png" alt="Facebook"></a>
+    <a href="https://www.instagram.com/elkuelgue/?hl=es"><img src="insta_red.png" alt="Instagram"></a>
+    <a href="https://www.elkuelgue.com/"><img src="web.png" alt="Website"></a>
+</div>
+
+
+
+    <script src="canciones.js"></script>
+</body>
+</html>
