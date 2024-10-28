@@ -55,7 +55,7 @@ h1{
 
   @keyframes slideInLeft {
     from {
-        transform: translateX(-100%);
+        transform:translateX(-100%);
     }
     to {
         transform: translateX(0);
@@ -203,10 +203,10 @@ h1{
 
     .youtube1{
       position: fixed;
-      bottom: 15px;
+      bottom: 5px;
       left: 13%;
-      width: 30px;
-      height: 30px;
+      width: 40px;
+      height: 40px;
       background-color:transparent;
       cursor: pointer
     }
@@ -215,8 +215,8 @@ h1{
       position: fixed;
       top: 53%;
       right: 13%;
-      width: 30px;
-      height: 30px;
+      width: 40x;
+      height: 40px;
       background-color:transparent;
       cursor: pointer;
     }
@@ -256,6 +256,30 @@ h1{
     .icon {
       cursor: pointer;
       margin: 0 5px;
+  }
+
+  .social-icons {
+    display: flex;
+    position: fixed;
+    bottom: 50px;
+    right: 43%;
+    gap: 20px;
+    padding: 5px;
+    height: 25px;
+    width: 200px;
+    border: 5px solid brown;
+    border-radius: 10px;
+    background-color: white;
+   justify-content: center;
+  }
+
+  .social-icons a {
+    text-decoration:none;
+    
+  }
+  .social-icons img {
+    width: 20px;
+    height: 20px;  
   }
        
 

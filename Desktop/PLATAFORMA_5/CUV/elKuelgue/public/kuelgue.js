@@ -17,6 +17,7 @@ if (cantante) {
     }
 }
 
+
 // Validar password > 6 caracteres
 function validarPassword() {
     const password = document.getElementById('password').value;

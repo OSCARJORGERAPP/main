@@ -85,7 +85,7 @@ document.getElementById('albumForm').addEventListener('submit', async function(e
       location.reload();
   } catch (error) {
       console.error('Error al crear el álbum:', error);
-      alert('Error al crear el álbum');
+      swal('Error en la portada del álbum', 'El nombre de la portada está mal escrito', 'error');
   }
 });
 
