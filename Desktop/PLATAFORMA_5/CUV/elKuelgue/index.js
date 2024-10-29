@@ -1,6 +1,9 @@
 //LLAMAR A EXPRESS (DEPENDENCIA)
 const express = require('express');
 const cors = require('cors');
+const dotenv = require('dotenv')
+dotenv.config()
+console.log(process.env)
 //LLAMAR A MONGOOSE
 const mongoose = require('mongoose');
 
@@ -13,8 +16,8 @@ const users = require('./models/users.js');
 const albums = require('./models/albums.js');
 
 //NUESTRA URL MONGO DB
-const url = 'mongodb+srv://ojrapp:Wn24CK6xa3SdXSBy@cluster0.bbhym.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
-
+const url = process.env.URL
+const port = process.env.PORT;
 //GUARDAMOS EL MODULO EXPRESS EN UNA CONSTANTE
 const app = express();
 const path = require("path");
@@ -22,6 +25,7 @@ const path = require("path");
 //MIDDLE WEAR PARCEA/ORGANIZA LOS DATOS PARA LEERLOS MEJOR
 app.use(express.json());
 app.use(cors())
+app.use("/health", (req, res) => res.sendStatus(200));
 //SIRVE LOS ARCHIVOS DEL FRONT END
 app.use(express.static(path.join(__dirname, "public")));
 
