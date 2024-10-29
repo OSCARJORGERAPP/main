@@ -25,7 +25,7 @@ const path = require("path");
 //MIDDLE WEAR PARCEA/ORGANIZA LOS DATOS PARA LEERLOS MEJOR
 app.use(express.json());
 app.use(cors())
-app.use("/health", (req, res) => res.sendStatus(200));
+//app.use("/health", (req, res) => res.sendStatus(200));
 //SIRVE LOS ARCHIVOS DEL FRONT END
 app.use(express.static(path.join(__dirname, "public")));
 
