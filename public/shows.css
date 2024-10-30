@@ -107,3 +107,17 @@
    justify-content: center;
 }
 
+.social-icons img {
+    width: 20px;
+    height: 20px;  
+}
+
+.otroEstadio{
+  position: fixed;
+  top: 59%;
+  right: 100px;
+  height: 250px;
+  width: 400px;
+  border: 3px solid brown;
+  border-radius: 10px;
+}
