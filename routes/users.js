@@ -2,6 +2,7 @@ const express = require('express')
 const users = require('../models/users')
 const bcrypt = require('bcrypt'); // Para manejar el hashing de contraseñas
 const jwt =require('jsonwebtoken')
+const cookieParser = require('cookie-parser');
 
 //UNA INSTANCIA PARA MANEJAR RUTAS
 const router = express.Router()
@@ -53,8 +54,6 @@ router.post('/logout', (req, res) => {
       res.status(500).send('Error al cerrar sesión');
   }
 });
-
-
 
 // GET - LISTAR TODOS LOS users - TC localhost:3000/users
 router.get('/', async (req, res)=>{
@@ -130,4 +129,9 @@ router.delete('/:id', async (req, res)=>{
   }
 })
 
-module.exports = router
+module.exports = router;
+
+
+
+
+
