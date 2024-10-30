@@ -44,7 +44,7 @@ const connectToMongo = async()=>{
 
         //FUNCION PARA LEVANTAR NUESTRO SERVIDOR
         app.listen(port, ()=>{
-        console.log("Server escuchando en puerto 3000 y DB conectada.");
+        console.log("Server escuchando en puerto port y DB conectada.");
         });
 
     } catch (error) {

@@ -29,10 +29,11 @@ router.post('/login', async (req, res) => {
           const isPasswordValid = await bcrypt.compare(req.body.password, user.password);
           const payload ={user, isPasswordValid}
           const secret = process.env.SECRET
-          console.log(secret)
+          
           if (isPasswordValid) {
               const token = jwt.sign(payload, secret, { expiresIn: '24h' })
               res.cookie('token',token)
+              console.log('TOKEN',token)
               res.status(200).send({ success: true, message: "Login exitoso" });
           } else {
               res.status(401).send({ success: false, message: "Contraseña incorrecta" });
