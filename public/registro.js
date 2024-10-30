@@ -28,7 +28,7 @@ form.addEventListener('submit', async function(event) {
 
     try {
         // Envía los datos del formulario al backend usando una solicitud POST con Axios
-        const response = await axios.post('http://localhost:3000/users', {
+        const response = await axios.post('https://elKuelgue.onrender.com/users', {
             nombre: nombre,
             password: password,
             email: email
