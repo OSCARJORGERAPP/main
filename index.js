@@ -1,8 +1,9 @@
 //LLAMAR A EXPRESS (DEPENDENCIA)
 const express = require('express');
 const cors = require('cors');
-const dotenv = require('dotenv')
-const jwt =require('jsonwebtoken')
+const dotenv = require('dotenv');
+const jwt =require('jsonwebtoken');
+const cookieParser = require('cookie-parser');
 
 //VARIABLES DE ENTORNO
 dotenv.config()
@@ -29,7 +30,7 @@ const path = require("path");
 app.use(express.json());
 app.use(cors())
 app.use("/health", (req, res) => res.sendStatus(200));
-//app.use(cookieParser())
+app.use(cookieParser());
 //SIRVE LOS ARCHIVOS DEL FRONT END
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -44,7 +45,7 @@ const connectToMongo = async()=>{
 
         //FUNCION PARA LEVANTAR NUESTRO SERVIDOR
         app.listen(port, ()=>{
-        console.log("Server escuchando en puerto 3000 y DB conectada.");
+        console.log("Server escuchando en puerto port y DB conectada.");
         });
 
     } catch (error) {
@@ -54,3 +55,4 @@ const connectToMongo = async()=>{
 }
  
 connectToMongo()
+
