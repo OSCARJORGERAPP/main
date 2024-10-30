@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const tableBody = document.getElementById('albumsTableBody');
 
   try {
-      const response = await axios.get('http://localhost:3000/albums');
+      const response = await axios.get('https://elKuelgue.onrender.com/albums');
       const albums = response.data;
 
       if (Array.isArray(albums)) {
@@ -38,7 +38,7 @@ async function editAlbum(id) {
     const portada = document.getElementById('portada').value;
 
     try {
-        const response = await axios.put(`http://localhost:3000/albums/${id}`, {
+        const response = await axios.put(`https://elKuelgue.onrender.com/albums/${id}`, {
             titulo,
             fechaDeLanzamiento,
             descripcion,
@@ -54,7 +54,7 @@ async function editAlbum(id) {
 
 async function deleteAlbum(id) {
     try {
-        const response = await axios.delete(`http://localhost:3000/albums/${id}`);
+        const response = await axios.delete(`https://elKuelgue.onrender.com/albums/${id}`);
         alert(response.data);
         location.reload(); // Recarga la página para actualizar la lista de álbumes
     } catch (error) {
@@ -79,7 +79,7 @@ document.getElementById('albumForm').addEventListener('submit', async function(e
   const data = Object.fromEntries(formData);
 
   try {
-      const response = await axios.post('http://localhost:3000/albums', data);
+      const response = await axios.post('https://elKuelgue.onrender.com/albums', data);
       alert(response.data);
       form.reset();
       location.reload();
