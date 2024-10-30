@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   logoutButton.addEventListener('click', async () => {
       try {
-          await axios.post('https://elKuelgue.onrender.com/logout');
+          await axios.post('https://elKuelgue.onrender.com/users/logout');
           window.location.href = 'https://elKuelgue.onrender.com/index.html';  // Redirige al usuario al login después del logout
       } catch (error) {
           console.error('Error al cerrar sesión:', error);
