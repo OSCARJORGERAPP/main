@@ -2,8 +2,11 @@
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv')
+const jwt =require('jsonwebtoken')
+
+//VARIABLES DE ENTORNO
 dotenv.config()
-console.log(process.env)
+
 //LLAMAR A MONGOOSE
 const mongoose = require('mongoose');
 
@@ -15,7 +18,7 @@ const bandasRouter=require('./routes/band.js')
 const users = require('./models/users.js');
 const albums = require('./models/albums.js');
 
-//NUESTRA URL MONGO DB
+//NUESTRA URL MONGO  DB 
 const url = process.env.URL
 const port = process.env.PORT;
 //GUARDAMOS EL MODULO EXPRESS EN UNA CONSTANTE
@@ -26,6 +29,7 @@ const path = require("path");
 app.use(express.json());
 app.use(cors())
 app.use("/health", (req, res) => res.sendStatus(200));
+//app.use(cookieParser())
 //SIRVE LOS ARCHIVOS DEL FRONT END
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -39,7 +43,7 @@ const connectToMongo = async()=>{
         await mongoose.connect(url)
 
         //FUNCION PARA LEVANTAR NUESTRO SERVIDOR
-        app.listen(3000, ()=>{
+        app.listen(port, ()=>{
         console.log("Server escuchando en puerto 3000 y DB conectada.");
         });
 
