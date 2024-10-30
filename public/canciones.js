@@ -54,3 +54,17 @@ async function borrarCancion(albumId, cancionId) {
 function abrirLink(url) {
     window.open(url, '_blank');
 }
+
+//Logout
+document.addEventListener('DOMContentLoaded', () => {
+  const logoutButton = document.getElementById('logoutButton');
+
+  logoutButton.addEventListener('click', async () => {
+      try {
+          await axios.post('https://elKuelgue.onrender.com/users/logout');
+          window.location.href = 'https://elKuelgue.onrender.com/index.html';  // Redirige al usuario al login después del logout
+      } catch (error) {
+          console.error('Error al cerrar sesión:', error);
+      }
+  });
+});
