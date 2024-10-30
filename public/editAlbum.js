@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (albumId) {
         try {
-            const response = await axios.get(`http://localhost:3000/albums/${albumId}`);
+            const response = await axios.get(`https://elKuelgue.onrender.com/albums/${albumId}`);
             const album = response.data;
             document.getElementById('titulo').value = album.titulo;
             document.getElementById('fechaDeLanzamiento').value = album.fechaDeLanzamiento;
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const portada = document.getElementById('portada').value;
 
         try {
-            const response = await axios.put(`http://localhost:3000/albums/${albumId}`, {
+            const response = await axios.put(`https://elKuelgue.onrender.com/albums/${albumId}`, {
                 titulo,
                 fechaDeLanzamiento,
                 descripcion,
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const link = document.getElementById('link').value;
 
         try {
-            const response = await axios.post(`http://localhost:3000/albums/${albumId}/canciones`, {
+            const response = await axios.post(`https://elKuelgue.onrender.com/albums/${albumId}/canciones`, {
                 nombreDeCancion,
                 duracion,
                 link
