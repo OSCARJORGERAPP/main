@@ -1,7 +1,7 @@
 //Obtiene los títulos de albums
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const response = await axios.get('http://localhost:3000/albums');
+        const response = await axios.get('https://elKuelgue.onrender.com/albums');
         const albumes = response.data;
         const selectAlbumes = document.getElementById('albumes');
 
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 //Al cambiar el album en la lista, obtiene las canciones y su duracióny completa la tabla
         selectAlbumes.addEventListener('change', async function() {
             const albumId = selectAlbumes.value;
-            const response = await axios.get(`http://localhost:3000/albums/${albumId}`);
+            const response = await axios.get(`https://elKuelgue.onrender.com/albums/${albumId}`);
             const album = response.data;
             const tbody = document.querySelector('#tablaCanciones tbody');
             tbody.innerHTML = '';
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 //Eliminar canción
 async function borrarCancion(albumId, cancionId) {
     try {
-        await axios.delete(`http://localhost:3000/albums/${albumId}/canciones/${cancionId}`);
+        await axios.delete(`https://elKuelgue.onrender.com/albums/${albumId}/canciones/${cancionId}`);
         swal("Canción eliminada", "La canción fue eliminada con éxito", "information").then(() => {
             document.querySelector('select#albumes').dispatchEvent(new Event('change'));//refresca la lista de albums
         });
