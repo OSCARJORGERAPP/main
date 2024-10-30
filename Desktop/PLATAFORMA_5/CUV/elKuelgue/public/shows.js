@@ -80,3 +80,16 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const logoutButton = document.getElementById('logoutButton');
+
+  logoutButton.addEventListener('click', async () => {
+      try {
+          await axios.post('/logout');
+          window.location.href = 'login.html';  // Redirige al usuario al login después del logout
+      } catch (error) {
+          console.error('Error al cerrar sesión:', error);
+      }
+  });
+});

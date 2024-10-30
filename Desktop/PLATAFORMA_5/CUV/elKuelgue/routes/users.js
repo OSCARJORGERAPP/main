@@ -2,6 +2,7 @@ const express = require('express')
 const users = require('../models/users')
 const bcrypt = require('bcrypt'); // Para manejar el hashing de contraseñas
 const jwt =require('jsonwebtoken')
+const cookieParser = require('cookie-parser');
 
 //UNA INSTANCIA PARA MANEJAR RUTAS
 const router = express.Router()
@@ -27,13 +28,9 @@ router.post('/login', async (req, res) => {
       const user = await users.findOne({ nombre: req.body.nombre });
       if (user) {
           const isPasswordValid = await bcrypt.compare(req.body.password, user.password);
-          const payload ={user, isPasswordValid}
-          const secret = process.env.SECRET
-          
           if (isPasswordValid) {
-              const token = jwt.sign(payload, secret, { expiresIn: '24h' })
-              res.cookie('token',token)
-              console.log('TOKEN',token)
+              const token = jwt.sign({ id: user._id }, process.env.SECRET, { expiresIn: '24h' });
+              res.cookie('token', token, { httpOnly: true, secure: true, sameSite: 'strict' });
               res.status(200).send({ success: true, message: "Login exitoso" });
           } else {
               res.status(401).send({ success: false, message: "Contraseña incorrecta" });
@@ -48,6 +45,15 @@ router.post('/login', async (req, res) => {
 });
 
 
+// Ruta para el logout
+router.post('/logout', (req, res) => {
+  try {
+      res.clearCookie('token');
+      res.status(204).send();  // Envía un código de estado 204 (No Content)
+  } catch (error) {
+      res.status(500).send('Error al cerrar sesión');
+  }
+});
 
 // GET - LISTAR TODOS LOS users - TC localhost:3000/users
 router.get('/', async (req, res)=>{
@@ -123,4 +129,8 @@ router.delete('/:id', async (req, res)=>{
   }
 })
 
-module.exports = router
+module.exports = router;
+
+
+
+
