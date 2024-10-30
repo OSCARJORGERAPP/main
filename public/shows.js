@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+//Logout
 document.addEventListener('DOMContentLoaded', () => {
   const logoutButton = document.getElementById('logoutButton');
 
