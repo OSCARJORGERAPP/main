@@ -32,20 +32,6 @@ h1{
     color: brown;
   }
 
-.linkGrisado{
-    background-color:lightgray;
-    border: 5px;
-    border-style: solid;
-    border-color: brown;
-    border-radius: 10px;
-    width: 90%;
-    height: 30px;
-    margin: 5px;
-    text-align: center;
-    font-family:'Times New Roman', Times, serif;
-    font-weight: bolder;
-    color: brown;
-
   .link:hover {
     background-color:salmon;
 }
@@ -296,6 +282,8 @@ h1{
     height: 20px;  
   }
        
+
+    
 
     
        
