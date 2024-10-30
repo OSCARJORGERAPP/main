@@ -1,0 +1,286 @@
+body{
+    background-color: black;
+    overflow-y: scroll; 
+}
+
+h1{
+    position: fixed;
+    color:brown;
+    text-align: center;
+    font-size:350%;
+    background-color: white;
+    border: 5px solid;
+    border-color: brown;
+    top: 0px;
+    margin-left: 43%;
+    padding: 10px;
+    border-radius: 10px; 
+   } 
+
+.link{
+    background-color: white;
+    border: 5px;
+    border-style: solid;
+    border-color: brown;
+    border-radius: 10px;
+    width: 90%;
+    height: 30px;
+    margin: 5px;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bolder;
+    color: brown;
+  }
+
+  .link:hover {
+    background-color:salmon;
+}
+  
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    border: 5px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: brown;
+    width:10%;
+    height: 300px;
+    align-content: center;
+    justify-content:space-around;
+    position: fixed;
+    top: 18%;
+    left: 10%;  
+  }
+
+  @keyframes slideInLeft {
+    from {
+        transform:translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.sidebar {
+    animation: slideInLeft 1s ease-out;
+}
+
+  
+.escenario{
+    width:100vw;
+    height: 100vh;
+    border-image: 5px;
+    border-style: solid;
+    border-color: brown;
+    border-radius: 10px;
+    
+    top: 18%;
+    left: 30%; 
+  } 
+  
+.album1{
+    position: fixed;
+    top:60%;
+    left: 5%;
+}
+
+.album2{
+    position: fixed;
+    top:18%;
+    right: 5%;
+}
+
+.custom-frame {
+    border: 5px solid brown;
+    border-radius: 10px;
+}
+
+  
+
+.albumAdd{
+  background-color: black;
+  width: 365px;
+  height: 30px;
+  border: 3px solid;
+  border-color: brown;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  font-family:'Courier New', Courier, monospace;
+  font-size:medium;
+  font-weight: bold;
+  color: brown;
+  input[type=text]{
+    width: 350px;
+    height: 25px;
+  border: 2px solid brown;
+  border-radius: 10px;
+  background-color: lightgrey;
+  font-size: medium;
+  font-family:'Courier New', Courier, monospace;
+  text-align: center;
+  font-weight: bold;
+  }
+
+  button[type=submit]{
+    border: 2px solid brown;
+    border-radius: 10px;
+    background-color: lightgrey;
+    font-size: medium;
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+    font-weight: bold;
+    }
+    textarea {
+        width: 350px;
+        border: 2px solid brown;
+        border-radius: 10px;
+        background-color: white;
+        font-size: medium;
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        font-weight: bold;
+    }
+  }
+  .albumContainer{
+      display: flex;
+      flex-direction: column;
+      background-color: black;
+      border: 5px;
+      border-radius: 10px;
+      border-style: solid;
+      border-color: brown;
+      width:25%;
+      height: 335px;
+      align-content: center;
+      justify-content:space-between;
+      position: fixed;
+      top: 60%;
+      right: 2%;
+    }
+
+    .btnAlbum {
+        padding: 5px;
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight:bold;
+      }
+
+    .star1{
+      position:fixed;
+        top:60%;
+        left: 5%;;
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .star2{
+      position:fixed;
+        top:18%;
+        right: 364px;
+        width: 30px;
+        height: 30px;
+        background-color: white;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+
+    .star1.clicked {
+      background-color: rgb(255, 72, 0);
+    }
+
+    .star2.clicked {
+      background-color: rgb(255, 72, 0);
+    }
+
+    .youtube1{
+      position: fixed;
+      bottom: 5px;
+      left: 13%;
+      width: 40px;
+      height: 40px;
+      background-color:transparent;
+      cursor: pointer
+    }
+
+    .youtube2{
+      position: fixed;
+      top: 53%;
+      right: 13%;
+      width: 40x;
+      height: 40px;
+      background-color:transparent;
+      cursor: pointer;
+    }
+
+    .tableContainer {
+      display: flex;
+      position:fixed;
+      right: 30%;
+      top: 153px;
+      justify-content: center;
+      align-items: center;
+      height:auto;
+      width: 40vw;
+      border: 5px solid brown;
+      border-radius: 10px;
+      background-color:black;
+      overflow-y: auto;max-height: 800px;
+
+    }
+    table {
+      border-collapse: collapse;
+      width: 80%;
+      margin: 5px 0;
+      background-color:black;
+    }
+    table, th, td {
+      border: 3px solid brown;
+    }
+    th, td {
+      padding: 5px;
+      text-align: left;
+      color: white;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: smaller;
+    }
+
+    .icon {
+      cursor: pointer;
+      margin: 0 5px;
+  }
+
+  .social-icons {
+    display: flex;
+    position: fixed;
+    bottom: 50px;
+    right: 43%;
+    gap: 20px;
+    padding: 5px;
+    height: 25px;
+    width: 200px;
+    border: 5px solid brown;
+    border-radius: 10px;
+    background-color: white;
+   justify-content: center;
+  }
+
+  .social-icons a {
+    text-decoration:none;
+    
+  }
+  .social-icons img {
+    width: 20px;
+    height: 20px;  
+  }
+       
+
+    

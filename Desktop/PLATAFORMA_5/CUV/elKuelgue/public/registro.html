@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Kuelgue</title>
+    <link rel="stylesheet" href="registro.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="kuelgueIco.jpg">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+</head>
+<body>
+    
+<img src="./Imagenes/bailando.jpg" alt="bailando" class="bailando">
+<img src="./Imagenes/bateria.jpg" alt="bailando" class="bateria">
+
+<h1>El Kuelgue</h1>
+
+<!--REGISTRO DE USUARIO-->
+<div class="itemsLog">
+    <h2>Registro de usuarios</h2>
+    <form id="registrationForm">
+        <div class="logs"><label for="nombre_usuario">Nombre:<input type="text" name="nombre" placeholder="nombre" id="nombre_usuario" required></label></div>
+        <div class="logs"><label for="password">password:<input type="password" name="password" placeholder="password" id="password" required oninput="validarPassword()"></label></div>
+        <p id="mensajeError" class="error">Use más de 6 caracteres</p>
+        <div class="logs"><label for="email">email:<input type="email" name="email" placeholder="email" id="email" required></label></div>
+        <div class="logs"><button type="submit">Registrarse</button></div>
+    </form>
+</div>
+
+
+
+<!--SIDEBAR USANDO POSITION FIXED-->   
+<div class="sidebar">
+    <div class="link"><img src="Imagenes/menu.png" alt="Home" width="25px" height="25px"></a></div>
+    <div class="link"><a href="index.html"><img src="Imagenes/home.png" alt="Home" width="25px" height="25px"></a></div>
+    <div class="linkGrisado"><img src="Imagenes/guitarra.png" alt="Home" width="25px" height="25px"></div>
+    <div class="linkGrisado"><img src="Imagenes/canciones.png" alt="Home" width="25px" height="25px"></div>
+    <div class="linkGrisado"><img src="Imagenes/vivo.png" alt="Shows" width="25px" height="25px"></div>
+    <div class="link"><img src="Imagenes/logout.png" alt="Logout" width="25px" height="25px"></div>
+</div>
+
+<div class="social-icons">
+    <a href="https://www.youtube.com/results?search_query=el+kuelgue" target="_blank"><img src="Imagenes/youtu_red.png" alt="YouTube"></a>
+    <a href="https://www.facebook.com/ElKuelgue/?locale=es_LA" target="_blank"><img src="Imagenes/face_blue.png" alt="Facebook"></a>
+    <a href="https://www.instagram.com/elkuelgue/?hl=es" target="_blank"><img src="Imagenes/insta_red.png" alt="Instagram"></a>
+    <a href="https://www.elkuelgue.com/" target="_blank"><img src="Imagenes/web.png" alt="Website"></a>
+  </div>
+
+<img src="./Imagenes/otroEstadio.jpg" alt="otro estadio" class="otroEstadio">
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="registro.js"></script>
+</body>
+</html>
