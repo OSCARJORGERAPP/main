@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Kuelgue</title>
+    <link rel="stylesheet" href="style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="kuelgueIco.jpg">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+</head>
+<body>
+ <!--INSERTA EL NOMBRE DE LA BANDA EN POSICION FIJA A LA DERECHA ABAJO, BIO DEL GRUPO E IMAGEN ARRIBA-->   
+    <div class="tabla">
+        <div class="home"><h1 class="homeTitulo">El Kuelgue</h1><p>El Kuelgue es un grupo musical argentino formado en el año 2004. Es liderada por Julián Kartún. En la actualidad la banda esta integrada por: Juan Kartún en voz, Santiago Martínez en voz y teclado, Juan Martín Mojoli en bajo, Nicolás Morone en guitarra, Pablo Vidal en saxo y Tomás Baillie en batería.</p></div>
+        <div class="home"><img src="./Imagenes/tocando.jpg" alt="escenario"></div>
+    </div>
+
+<!--INSERTA IMAGEN A LA DERECHA DE LA SIDEBAR-->
+    <img src="personajes.jpg" alt="El Kuelgue en el escenario" class="escenario">
+
+ <!--LOGIN EN POSICION FIJA A LA IZQUIERDA Y ABAJO EN LA PAGINA-->   
+ <div class="container">
+    <form id="loginForm" method="get" action="albumes.html">
+        <div class="login"><label for="nombre_usuario"><input type="text" name="nombre" placeholder="nombre" id="nombre_usuario" required></label></div>
+        <div class="login"><label for="password"><input type="password" name="password" placeholder="password" id="password" required oninput="validarPassword()" autocomplete="current-password"></label></div>
+        <p id="mensajeError" class="error">Use más de 6 caracteres</p>
+        <div class="login"><button type="submit">login</button></div>
+        <div class="login"><button type="submit" onclick="olvideMiPassword()">Olvide mi password</button></div>
+        <div class="login"><a href="registro.html" class="btnlog">registrese aquí</a></div>
+    </form>
+</div>
+
+<!--VINCULA HTML CON AXIOS Y MI JS DEL FRONT END-->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="kuelgue.js"></script>
+</body>
+</html>
