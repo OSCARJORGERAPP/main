@@ -50,6 +50,7 @@ router.post('/logout', (req, res) => {
   try {
       res.clearCookie('token');
       res.status(204).send();  // Envía un código de estado 204 (No Content)
+      window.location.href ='https://elKuelgue.onrender.com/index.html
   } catch (error) {
       res.status(500).send('Error al cerrar sesión');
   }
