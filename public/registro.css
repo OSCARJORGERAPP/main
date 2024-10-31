@@ -218,7 +218,7 @@ border-radius: 10px;
 }
 
  .error {
-      color: red;
+      color: white;
       display: none;
       font-family:'Courier New', Courier, monospace;
       font-size:medium;
