@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             console.error('Error al agregar la canción:', error);
             swal("Error", "Error al agregar la canción", "error");
         }
+        this.reset();
     });
 
     // Alerta inicial
