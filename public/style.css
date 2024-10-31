@@ -422,7 +422,7 @@ input[type=url]{
     }
 
     .error {
-      color: red;
+      color: white;
       display: none;
       font-family:'Courier New', Courier, monospace;
       font-size:smaller;
